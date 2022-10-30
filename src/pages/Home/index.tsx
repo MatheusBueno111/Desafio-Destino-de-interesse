@@ -236,7 +236,7 @@ export function Home({ onUpdateTheme }: HomeProps) {
                     id="destinationForm"
                     disabled={!(dirty && isValid)}
                   >
-                    Submit
+                    Enviar
                   </button>
                 </Dialog.Trigger>
 

@@ -15,6 +15,7 @@ export const HomeContainer = styled.div`
     border-radius: 0.375rem;
     background-color: ${({ theme }) => theme['green-500']};
     font-weight: 700;
+    color: ${({ theme }) => theme['grey-900']};
 
     padding: 0.75rem 1rem;
     cursor: pointer;
