@@ -181,7 +181,7 @@ export function Home() {
 
               <DestinationWrapper>
                 <h2>Destinos de interesse</h2>
-                <label htmlFor="country">Escolha um país</label>
+                <label htmlFor="country">Escolha um país:</label>
                 <InputWrapper>
                   <Select
                     className="countrys"
@@ -200,7 +200,7 @@ export function Home() {
                   />
                 </InputWrapper>
 
-                <label htmlFor="city">Escolha um cidade</label>
+                <label htmlFor="city">Escolha um cidade:</label>
                 <InputWrapper>
                   <Select
                     className="countrys"
