@@ -14,20 +14,26 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import { ThemeContext } from 'styled-components'
 import {
+  ButtonContainer,
   DestinationWrapper,
   FormDestinationContainer,
   HomeContainer,
   InputWrapper,
   PersonalDataContainer,
 } from './styles'
-import { Envelope, Phone, User } from 'phosphor-react'
+import { Envelope, Moon, Phone, User } from 'phosphor-react'
 import { ShowNewUserModal } from './components/ShowNewUserModal'
 
-export function Home() {
+interface HomeProps {
+  onUpdateTheme: (theme: boolean) => void
+}
+
+export function Home({ onUpdateTheme }: HomeProps) {
   const [countries, setCountries] = useState<Country[]>([])
   const [cities, setCities] = useState<City[]>([])
   const [countryCode, setCountryCode] = useState('')
   const [user, setUser] = useState<UserProps>()
+  const [darkTheme, setDarkTheme] = useState(false)
 
   const { 'grey-900': grey900 } = useContext(ThemeContext)
 
@@ -237,6 +243,16 @@ export function Home() {
                 {user ? <ShowNewUserModal user={user} /> : []}
               </>
             </Dialog.Root>
+            <>
+              <ButtonContainer
+                onClick={() => {
+                  setDarkTheme(!darkTheme)
+                  onUpdateTheme(darkTheme)
+                }}
+              >
+                <Moon size={32} weight="fill" />
+              </ButtonContainer>
+            </>
           </HomeContainer>
         </Form>
       )}

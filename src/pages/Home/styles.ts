@@ -3,18 +3,19 @@ import styled from 'styled-components'
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 5rem;
   align-items: center;
   justify-content: center;
 
   button {
     display: flex;
     margin-top: 5rem;
+    margin-right: 2.4rem;
     border: none;
     border-radius: 0.375rem;
     background-color: ${({ theme }) => theme['green-500']};
     font-weight: 700;
-    margin-right: 2.4rem;
+
     padding: 0.75rem 1rem;
     cursor: pointer;
 
@@ -47,6 +48,7 @@ export const PersonalDataContainer = styled.div`
   flex-direction: column;
   max-width: 25rem;
   width: 100%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 
   gap: 1rem;
   padding: 4rem;
@@ -75,6 +77,7 @@ export const DestinationWrapper = styled.div`
   flex-direction: column;
   max-width: 25rem;
   width: 100%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 
   background-color: ${({ theme }) => theme['grey-800']};
   padding: 4rem;
@@ -170,5 +173,24 @@ export const InputWrapper = styled.div`
     ::-webkit-scrollbar-thumb:hover {
       background: ${({ theme }) => theme['grey-500']};
     }
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-right: 2.4rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: solid;
+  border-radius: 50%;
+  padding: 0.2rem;
+  background-color: ${({ theme }) => theme['green-300']};
+  color: ${({ theme }) => theme['green-300']};
+  cursor: pointer;
+
+  svg {
+    color: ${({ theme }) => theme['grey-900']};
   }
 `
