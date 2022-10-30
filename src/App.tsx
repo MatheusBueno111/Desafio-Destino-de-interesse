@@ -12,7 +12,7 @@ export function App() {
     <ThemeProvider
       theme={toogleDarkTheme === false ? defaultTheme : LightTheme}
     >
-      <Home onUpdateTheme={(value) => setToogleDarkTheme(value)} />
+      <Home onUpdateTheme={(value) => setToogleDarkTheme(!value)} />
 
       <ToastContainer autoClose={3000} />
       <GlobalStyle />
