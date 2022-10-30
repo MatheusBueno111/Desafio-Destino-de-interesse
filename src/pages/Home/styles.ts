@@ -145,6 +145,8 @@ export const InputWrapper = styled.div`
     border-right: 1rem;
 
     option {
+      background-color: ${({ theme }) => theme['grey-900']};
+      color: ${({ theme }) => theme['grey-100']};
     }
 
     :focus {

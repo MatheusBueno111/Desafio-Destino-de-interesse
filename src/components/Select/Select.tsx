@@ -43,7 +43,7 @@ const Select: React.FC<SelectProps> = ({
               key={index}
               value={element[value as keyof typeof element]}
             >
-              {element.name ? element.name : 'oi'}
+              {element.name}
             </option>
           )
         })
